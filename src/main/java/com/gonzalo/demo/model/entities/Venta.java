@@ -45,7 +45,7 @@ public class Venta implements Serializable {
     @JsonManagedReference
     private List<ProductoDetalle> productoDetalles;
 
-    @OneToOne(mappedBy = "venta")
+    @OneToOne(mappedBy = "venta", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
     private VentaPago ventaPago;
 

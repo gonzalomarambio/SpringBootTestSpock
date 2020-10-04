@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface VentaRepository extends JpaRepository<Venta, Long> {
 
     Optional<Venta> getById(Long id);
+
+    Venta save(Venta venta);
 }

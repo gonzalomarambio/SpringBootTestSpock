@@ -19,6 +19,8 @@ public class Stock implements Serializable {
     private Long id;
     @Column(name = "cantidad")
     private Long cantidad;
+
     @OneToOne
+    @JoinColumn(name = "id_producto")
     private Producto producto;
 }
